@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Parisienne&display=swap" rel="stylesheet">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Invitation App</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        body {
+            background-image: url(links-background.webp);
+            background-position: center;
+            background-attachment: fixed;
+            background-repeat: no-repeat;
+            overflow: hidden;
+            position: relative;
+        }
+        h1 { font-family: "parisienne", sans-serif;
+            text-align: center;
+            margin-top: 100px;
+            animation: slideDown 2s ease-out forwards;
+        }
+        a {
+            animation: slideUp 2s ease-out forwards;
+            font-weight: bold;
+            font-family: "parisienne", sans-serif;
+            font-size: 20px;
+            color: black;
+            background-color: mediumorchid;
+            padding: 5px;
+            border: 1px solid black;
+            border-radius: 10px;
+            text-decoration: none;
+        }
+        a:hover {
+            background-color: blueviolet;
+        }
+        #create {
+            margin-top: 150px;
+        }
+        #view {
+            margin-top: 3px;
+        }
+        
+@keyframes slideDown {
+    0% {
+        transform: translateY(-50px); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+
+
+@keyframes slideUp {
+    0% {
+        transform: translateY(50px); 
+        opacity: 0; 
+    }
+    100% {
+        transform: translateY(0); 
+        opacity: 1; 
+    }
+}
+        
+@keyframes firework {
+    0% {
+        opacity: 1;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(90deg);
+    }
+}
+
+@keyframes firework {
+    0% {
+        opacity: 1;
+        transform: scale(0) rotate(0deg);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1.2) rotate(45deg);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0) rotate(90deg);
+    }
+}
+
+/* Style for individual fireworks */
+.firework {
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: #ffcc00; /* Yellow color for the fireworks */
+    box-shadow: 0 0 10px rgba(255, 204, 0, 0.7); /* Glowing effect */
+    animation: firework 1.5s ease-out infinite; /* Firework animation */
+    pointer-events: none; /* Make sure they don’t interfere with other elements */
+}
+
+/* Create multiple fireworks with random positions */
+.firework:nth-child(1) {
+    top: 20%;
+    left: 30%;
+    animation-delay: 0s;
+}
+
+.firework:nth-child(2) {
+    top: 40%;
+    left: 50%;
+    animation-delay: 1s;
+}
+
+.firework:nth-child(3) {
+    top: 60%;
+    left: 70%;
+    animation-delay: 2s;
+}
+
+.firework:nth-child(4) {
+    top: 80%;
+    left: 20%;
+    animation-delay: 3s;
+}
+
+.firework:nth-child(5) {
+    top: 25%;
+    left: 75%;
+    animation-delay: 4s;
+}
+
+.firework:nth-child(6) {
+    top: 50%;
+    left: 10%;
+    animation-delay: 2.5s;
+}
+
+.firework:nth-child(7) {
+    top: 30%;
+    left: 80%;
+    animation-delay: 3.5s;
+}
+
+.firework:nth-child(8) {
+    top: 10%;
+    left: 40%;
+    animation-delay: 1.5s;
+}
+
+/* Sparkling effect for the fireworks */
+@keyframes sparkle {
+    0% {
+        opacity: 0;
+        transform: scale(0);
+    }
+    50% {
+        opacity: 1;
+        transform: scale(1);
+    }
+    100% {
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+.sparkle {
+    position: absolute;
+    width: 4px;
+    height: 4px;
+    border-radius: 50%;
+    background-color: #ff6600; /* Sparkle color */
+    animation: sparkle 0.5s ease-out infinite;
+}
+
+/* Random positions for sparkle effects */
+.sparkle:nth-child(1) {
+    top: 30%;
+    left: 40%;
+    animation-delay: 0s;
+}
+
+.sparkle:nth-child(2) {
+    top: 50%;
+    left: 60%;
+    animation-delay: 1s;
+}
+
+.sparkle:nth-child(3) {
+    top: 70%;
+    left: 80%;
+    animation-delay: 2s;
+}
+
+.sparkle:nth-child(4) {
+    top: 20%;
+    left: 90%;
+    animation-delay: 3s;
+}
+
+.sparkle:nth-child(5) {
+    top: 30%;
+    left: 20%;
+    animation-delay: 2.5s;
+}
+
+    </style>
+    
+</head>
+<body>
+    <h1>Welcome to the<br> Invitation Web</h1>
+    
+         <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+    <div class="firework"></div>
+
+    <!-- Sparkle elements -->
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+    <div class="sparkle"></div>
+            <a id="create" href="create-invitation.html">Create Invitations</a>
+            <a id="view" href="view-invitation.html">View Created Invitations</a>
+        
+    
+    
+</body>
+</html>
+
